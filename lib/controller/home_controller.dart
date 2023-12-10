@@ -26,7 +26,7 @@ class HomeController extends GetxController {
     update();
     try {
       var uri = await http.get(Uri.parse(
-          "https://newsapi.org/v2/everything?q=${tab ?? "politics"}=2023-11-07&sortBy=publishedAt&apiKey=a00083b95f1b4de282c0e74f9c1695c2"));
+          "https://newsapi.org/v2/everything?q=${tab ?? "politics"}=2023-11-07&sortBy=publishedAt&apiKey=b194923341fc4804a83c66dcd403eee8"));
       if (uri.statusCode == 200) {
         response = jsonDecode(uri.body);
         update();

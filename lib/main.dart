@@ -1,9 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_app/view/home_screen.dart';
+import 'package:news_app/view/login_screen.dart';
 import 'package:news_app/view/news_details_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
@@ -14,7 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         getPages: [
-          GetPage(name: "/", page: () => HomeScreen()),
+          GetPage(name: "/home", page: () => HomeScreen()),
+          GetPage(name: "/", page: () => LoginScreen()),
           GetPage(name: "/details", page: () => NewsDetailScreen())
         ],
         title: 'Flutter Demo',
@@ -26,6 +32,6 @@ class MyApp extends StatelessWidget {
               ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 248, 67, 67)),
         ),
         debugShowCheckedModeBanner: false,
-        home: HomeScreen());
+        home: LoginScreen());
   }
 }
