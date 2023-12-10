@@ -1,16 +1,24 @@
-# news_app
 
-A new Flutter project.
 
-## Getting Started
+# News app
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+In this project I have build news app, with 2 pages- listing and news details.
+On homescreen there is
+-search bar where user can search news 
+-a tabbar to view news by category.
+-list content is from Api.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+on News detail screen there is heading, content and image , and two buttons
+-Read Story : by clicking on read story user can open news url in browser for that  I have used url launcher package,
+-share now : by clicking on share now users can share news link to their contacts ,for sharing  I have used share_plus package. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Other than that I have used-
+-http to get api response,
+-Getx for state management,
+-MVC
+
+
+
+
+
